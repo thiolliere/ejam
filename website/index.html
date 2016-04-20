@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>E-Jam</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <link href="css/search.css" rel="stylesheet">
+    <link href="css/glyphicon.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        E-Jam
+                    </a>
+                </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"> Profil</span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-envelope"> Messagerie</span></a></li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-heart"> Favoris</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-music"> Nouvelle session</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-time"> Historique</span></a>
+                </li>
+            </ul>
+        </div>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div id="custom-search-input">
+                                            <div class="input-group col-md-12">
+                                                <input type="text" class="form-control input-lg" placeholder="Rechercher..." />
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-info btn-lg" type="button">
+                                                        <i class="glyphicon glyphicon-search"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            </ul>
+
+          </div><!-- /.container-fluid -->
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+        <div class="row">
+            <script>
+                function generateVideo(tags, musicians, spectators) {
+                    document.write('\
+                    <div class="col-lg-3">\
+                        <div class="well">\
+                          <img src="images/mock_video.png" alt="Mock Video" style="width:320px;height:200px;">\
+                          <div class="row">\
+                            <div class="col-lg-7"><p>');
+                            for(var i = 0 ; i < tags.length ; i++) {
+                                document.write('<a class="btn btn-danger" href="#" role="button">' + tags[i] + '</a>');
+                            }
+                            document.write('</p></div>\
+                            <div class="col-lg-5">\
+                                  <span class="glyphicon glyphicon-music"></span>' + musicians + '&nbsp;&nbsp;\
+                                  <span class="glyphicon glyphicon-user"></span> ' + spectators + '\
+                            </div>\
+                          </div>\
+                        </div>\
+                    </div>\
+                    ')
+                }
+                function myRand(min, max) {
+                    return Math.floor((Math.random() * (max-min)) + min);
+                }
+                function generateRandomVideo() {
+                    var music_tags = [
+                        ['A cappella']
+                        ['Rock'],
+                        ['Electro'],
+                        ['Jazz'],
+                        ['Jazz manouche'],
+                        ['Blues'],
+                        ['Reggae', 'Ska'],
+                        ['Rap', 'Battle'],
+                        ['Rap', 'West Coast'],
+                        ['Rap', 'Old school'],
+                        ['Rock', 'Old school'],
+                        ['House'],
+                        ['Deep house'],
+                        ['Electro', 'House'],
+                        ['Metal'],
+                        ['Punk'],
+                        ['Country'],
+                        ['Country', 'Folk'],
+                        ['Folk']
+                    ]
+                    tag_index = myRand(0, music_tags.length)
+                    generateVideo(music_tags[tag_index], myRand(2, 7), myRand(10, 50));
+                }
+                for(var i = 0 ; i < 12 ; i++) {
+                    generateRandomVideo();
+                }
+            </script>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
