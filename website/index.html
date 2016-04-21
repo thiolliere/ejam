@@ -78,60 +78,62 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
 
-        <div class="row">
-            <script>
-                function generateVideo(tags, musicians, spectators) {
-                    document.write('\
-                    <div class="col-lg-3">\
-                        <div class="well">\
-                          <img src="images/mock_video.png" alt="Mock Video" style="width:320px;height:200px;">\
-                          <div class="row">\
-                            <div class="col-lg-7"><p>');
-                            for(var i = 0 ; i < tags.length ; i++) {
-                                document.write('<a class="btn btn-danger" href="#" role="button">' + tags[i] + '</a>');
-                            }
-                            document.write('</p></div>\
-                            <div class="col-lg-5">\
-                                  <span class="glyphicon glyphicon-music"></span>' + musicians + '&nbsp;&nbsp;\
-                                  <span class="glyphicon glyphicon-user"></span> ' + spectators + '\
+            <div class="row">
+                <script>
+                    function generateVideo(tags, musicians, spectators) {
+                        document.write('\
+                        <div class="col-lg-3">\
+                            <div class="well">\
+                              <img src="images/mock_video.png" alt="Mock Video" style="width:320px;height:200px;">\
+                              <div class="row">\
+                                <div class="col-lg-7"><p>');
+                                for(var i = 0 ; i < tags.length ; i++) {
+                                    document.write('<a class="btn btn-danger" href="#" role="button">' + tags[i] + '</a>');
+                                }
+                                document.write('</p></div>\
+                                <div class="col-lg-5">\
+                                      <span class="glyphicon glyphicon-music"></span>' + musicians + '&nbsp;&nbsp;\
+                                      <span class="glyphicon glyphicon-user"></span> ' + spectators + '\
+                                </div>\
+                              </div>\
                             </div>\
-                          </div>\
                         </div>\
-                    </div>\
-                    ')
-                }
-                function myRand(min, max) {
-                    return Math.floor((Math.random() * (max-min)) + min);
-                }
-                function generateRandomVideo() {
-                    var music_tags = [
-                        ['A cappella']
-                        ['Rock'],
-                        ['Electro'],
-                        ['Jazz'],
-                        ['Jazz manouche'],
-                        ['Blues'],
-                        ['Reggae', 'Ska'],
-                        ['Rap', 'Battle'],
-                        ['Rap', 'West Coast'],
-                        ['Rap', 'Old school'],
-                        ['Rock', 'Old school'],
-                        ['House'],
-                        ['Deep house'],
-                        ['Electro', 'House'],
-                        ['Metal'],
-                        ['Punk'],
-                        ['Country'],
-                        ['Country', 'Folk'],
-                        ['Folk']
-                    ]
-                    tag_index = myRand(0, music_tags.length)
-                    generateVideo(music_tags[tag_index], myRand(2, 7), myRand(10, 50));
-                }
-                for(var i = 0 ; i < 12 ; i++) {
-                    generateRandomVideo();
-                }
-            </script>
+                        ')
+                    }
+                    function myRand(min, max) {
+                        return Math.floor((Math.random() * (max-min)) + min);
+                    }
+                    function generateRandomVideo() {
+                        var music_tags = [
+                            ['A cappella']
+                            ['Rock'],
+                            ['Electro'],
+                            ['Jazz'],
+                            ['Jazz manouche'],
+                            ['Blues'],
+                            ['Reggae', 'Ska'],
+                            ['Rap', 'Battle'],
+                            ['Rap', 'West Coast'],
+                            ['Rap', 'Old school'],
+                            ['Rock', 'Old school'],
+                            ['House'],
+                            ['Deep house'],
+                            ['Electro', 'House'],
+                            ['Metal'],
+                            ['Punk'],
+                            ['Country'],
+                            ['Country', 'Folk'],
+                            ['Folk']
+                        ]
+                        tag_index = myRand(1, music_tags.length)
+                        generateVideo(music_tags[tag_index], myRand(2, 7), myRand(10, 50));
+                    }
+                    for(var i = 0 ; i < 12 ; i++) {
+                        generateRandomVideo();
+                    }
+                </script>
+            </div>
+            <!-- /#row -->
         </div>
         <!-- /#page-content-wrapper -->
 
