@@ -180,6 +180,51 @@ Une fois le compte créer le musicien peut rechercher une session ou créer une 
 E-Jam propose aussi une plate-forme en ligne pour les spectateurs. La création d'un compte est possible pour les spectateurs, mais non nécessaire. L’utilisateur se verra proposé des sessions sur la page principale et pourra aussi rechercher une session avec des mots-clés et des noms de musiciens ou groupes.\\
 La création de compte permettra aux spectateurs d’avoir un agenda avec les dates des sessions des musiciens qu’ils suivent.
 
+Nous avons développé un prototype de plate-forme en ligne.
+
+La figure \ref{ceca_site_accueil} est une capture d'écran de la page d'accueil de
+la plate-forme. On y voit notamment différentes sessions, chacune étant dotée d'un
+ou plusieurs tags qualifiant son style de musique ainsi que de compteurs du nombre
+de musiciens et du nombre de spectateurs. L'utilisateur a également accès à une
+barre de recherche lui permettant de chercher une session ou un utilisateur selon
+différents critères. Il y a également un menu latéral, donnant accès au profil de
+l'utilisateur, sa messagerie, son agenda, ses favoris (i.e. les autres utilisateurs
+qu'il apprécie) ainsi qu'un bouton permettant de démarrer une nouvelle session.
+
+\begin{figure}[!ht]
+    \center
+    \includegraphics[width=15cm]{ceca_site_accueil.png}
+    \caption{Page d'accueil de la plate-forme en ligne}
+    \label{ceca_site_accueil}
+\end{figure}
+
+La figure \ref{ceca_site_session} est une capture d'écran d'une session. Cette page
+présente, comme la page d'accueil, une barre de recherche et un menu latéral.
+La partie spécifique à la session est divisée en deux.
+
+La partie gauche est dédiée aux actions de l'utilisateur. Une barre d'onglets permet
+d'alterner entre les différentes utilisations :
+\begin{itemize}
+    \item L'utilisateur peut discutter avec d'autres utilisateurs (spectateurs ou
+    musiciens).
+    \item L'utilisateur peut modifier les paramètres de la session, il a notamment
+    accès à un equalizer.
+\end{itemize}
+
+La partie droite est dédiée à la visualisation, qui peut être modifiée par les musiciens :
+\begin{itemize}
+    \item Les musiciens peuvent se filmer en train de jouer et diffuser la vidéo ici.
+    \item Ils peuvent diffuser une vidéo pré-enregistrée ou une image fixe.
+    \item Ils peuvent également diffuser des effets visuels.
+\end{itemize}
+
+\begin{figure}[!ht]
+    \center
+    \includegraphics[width=15cm]{ceca_site_session.png}
+    \caption{Une session sur la plate-forme en ligne}
+    \label{ceca_site_session}
+\end{figure}
+
 \subsection{Détails sur la réalisation technique}
 
 Dans une session chacun des musiciens envoi aux autres ce qu’il joue. Or cette transmission de donnés peut être plus ou moins longue selon la distance entre les utilisateurs et l’état du réseaux. Ce qui pose le problème suivant: le temps de transmission est-il perceptible par le destinataire ? Car si un guitariste reçoit le tempo du batteur une demi seconde en retard lorsqu’il joue sa note le batteur la percevra décalé avec ce qu’il joue même si le guitariste joue sur le tempo.\\
