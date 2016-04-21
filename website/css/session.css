@@ -1,0 +1,19 @@
+.video {
+    background: #aaaaaa;
+    width: 100%;
+    height: 545px;
+}
+.chat {
+    border: 1px solid #aaaaaa;
+    background: #ffffff;
+}
+.chat-box {
+    height: 510px;
+    overflow: hidden;
+    background: #ffffff;
+}
+.chat .text {
+    margin-left: 6px;
+    width: 98%;
+    height: 32px;
+}
