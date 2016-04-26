@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>E-Jam</title>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/search.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/session.css" type="text/css"/>
+    <link href="css/glyphicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="index.html">E-Jam</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"> Profil</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-envelope"> Messagerie</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-calendar"> Agenda</span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-heart"> Favoris</span></a></li>
+                <li><a href="session.html"><span class="glyphicon glyphicon-music"> Nouvelle session</span></a></li>
+            </ul>
+        </div>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div id="custom-search-input">
+                                            <div class="input-group col-md-12">
+                                                <input type="text" class="form-control input-lg" placeholder="Rechercher..." />
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-info btn-lg" type="button">
+                                                        <i class="glyphicon glyphicon-search"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            </ul>
+
+          </div><!-- /.container-fluid -->
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+
+            <div class="well">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="chat">
+                            <div class="btn-toolbar">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-secondary active">Discussion</button>
+                                    <button type="button" class="btn btn-secondary">Paramètres</button>
+                                </div>
+                            </div>
+                            <div class="chat-box">
+                                <p>
+                                    Nathan : Le batteur est vraiment bon !
+                                </p>
+                                <p>
+                                    Manon : Superbe impro. Bravo :)
+                                </p>
+                                <p>
+                                    Bob : Top le solo de basse !
+                                </p>
+                            </div>
+                            <form action="#">
+                                <table width="100%">
+                                    <tr>
+                                        <td><input class="text"/></td>
+                                        <td width="40">
+                                            <div class="btn btn-default">
+                                                <a href="#">></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="video">
+                            <div class="row" style="margin-bottom:20px">
+                                <div class="col-lg-6">
+                                    <img src="images/drums.jpg" alt="Mock Video" style="width:100%;">
+                                </div>
+                                <div class="col-lg-6">
+                                    <img src="images/guitar.jpg" alt="Mock Video" style="width:100%;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img src="images/bass.jpg" alt="Mock Video" style="width:100%;">
+                                </div>
+                                <div class="col-lg-6">
+                                    <img src="images/guitar2.png" alt="Mock Video" style="width:100%;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <a class="btn btn-danger" href="#" role="button">Rock</a>
+                                <a class="btn btn-danger" href="#" role="button">Old school</a>
+                            </div>
+                            <div class="col-lg-3">
+                                  <span class="glyphicon glyphicon-music"></span> 4 &nbsp;&nbsp;
+                                  <span class="glyphicon glyphicon-user"></span> 28
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
